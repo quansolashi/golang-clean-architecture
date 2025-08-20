@@ -1,7 +1,7 @@
 package usecase
 
 import (
-	"clean-architecture/internal/domain/dto"
+	"clean-architecture/internal/application/dto"
 	"clean-architecture/internal/domain/entity"
 	mock_repository "clean-architecture/mock/repository"
 	"context"

@@ -10,7 +10,7 @@
 package mock_repository
 
 import (
-	dto "clean-architecture/internal/domain/dto"
+	dto "clean-architecture/internal/application/dto"
 	entity "clean-architecture/internal/domain/entity"
 	context "context"
 	reflect "reflect"

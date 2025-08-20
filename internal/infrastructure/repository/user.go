@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"clean-architecture/internal/domain/dto"
+	"clean-architecture/internal/application/dto"
 	"clean-architecture/internal/domain/entity"
 	"clean-architecture/internal/domain/repository"
 	"context"

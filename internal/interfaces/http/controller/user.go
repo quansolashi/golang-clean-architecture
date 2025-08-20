@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"clean-architecture/internal/domain/dto"
+	"clean-architecture/internal/application/dto"
 	"clean-architecture/internal/interfaces/http/response"
 	"clean-architecture/internal/interfaces/http/service"
 	"clean-architecture/internal/util"
