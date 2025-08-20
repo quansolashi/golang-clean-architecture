@@ -1,0 +1,13 @@
+FROM golang:1.24.2-alpine
+
+ENV LANG C.UTF-8
+
+ENV AIR_VERSION 1.41.0
+
+WORKDIR /go/src/clean-architecture
+
+RUN apk add --update \
+      git \
+      make
+
+RUN go install github.com/cosmtrek/air@v${AIR_VERSION}

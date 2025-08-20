@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  mysql:
+    image: mysql:8.0
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: clean-architecture
+    restart: always
+    volumes:
+      - ./db/mysql_data:/var/lib/mysql
+  backend:
+    working_dir: /go/src/clean-architecture
+    depends_on:
+      - mysql
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - 8080:8080
+    volumes:
+      - ./:/go/src/clean-architecture:cached
+    env_file: .env
+    restart: always
+    command: make dev
